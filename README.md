@@ -1,6 +1,6 @@
 # Payment Processing System
 
-This project demonstrates a scalable payment processing system using Java/Spring Boot, Apache Kafka, and Terraform. The system processes payment events and performs reconciliation via a Kafka listener.
+This project demonstrates a payment processing system using Java/Spring Boot, Apache Kafka, and Terraform. The system processes payment events and performs reconciliation via a Kafka listener.
 
 ## Features
 - REST API for creating payment transactions.
