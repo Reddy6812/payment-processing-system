@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/payments_db
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: payment-group
+      auto-offset-reset: earliest
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+# Default Kafka topic if not overridden in PaymentService
+spring:
+  kafka:
+    template:
+      default-topic: payment-transactions
